@@ -1,0 +1,206 @@
+/* Link fonts */
+@font-face {
+    font-family: "Bebas";
+    src: url(../fonts/bebas/BEBAS.ttf);
+}
+@font-face {
+    font-family: "Bebas Regular";
+    src: url(../fonts/bebas/BebasNeue-Regular.otf);
+}
+/* Declare Variables */
+:root {
+    --primary: rgb(251, 180, 41);
+    --primary-dark: rgb(212, 151, 34);
+    --background: rgb(255, 255, 255);
+    --text-primary: #000000;
+    --black: #000000;
+    --white: #ffffff;
+    /* Colors */
+    /* Sizes */
+    --heading-large: 5.6rem;
+    --heading-medium: 3.6rem;
+    --heading-small: 2.4rem;
+    --paragraph: 1.11rem;
+    /* Fonts */
+    --font-main: "Poppins";
+    --font-bebas: "Bebas";
+    --font-bebas-regular: "Bebas Regular";
+}
+* {
+    box-sizing: border-box;
+}
+html, body {
+    margin: 0;
+    color: var(--text-primary);
+    font-family: var(--font-main);
+    background-color: var(--background);
+    -webkit-font-smoothing: antialiased;
+    scroll-behavior: smooth;
+}
+/* #Text */
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+/* Font Size */
+h1 {
+    font-size: var(--heading-large);
+}
+h2 {
+    font-size: var(--heading-medium);
+}
+h3 {
+    font-size: var(--heading-small);
+}
+h4 {
+    font-size: calc(var(--heading-small) - .2rem);
+}
+h5 {
+    font-size: calc(var(--heading-small) - .4rem);
+}
+h6 {
+    font-size: calc(var(--heading-small) - .6rem);
+}
+/* Font Weight */
+h1, h2 {
+    font-weight: 900;
+}
+h3, h4, h5, h6 {
+    font-weight: 800;
+}
+/* Paragraphs */
+p {
+    margin: 0;
+    font-size: var(--paragraph);
+}
+/* #Links */
+a {
+    color: var(--primary);
+    font-size: var(--paragraph);
+    text-decoration: underline;
+}
+a:visited {
+    color: var(--primary-dark);
+}
+/* #Buttons */
+button {
+    padding: .8em 1.2em;
+    border: 1px solid var(--black);
+    background-color: var(--background);
+    font-size: var(--paragraph);
+    outline: none;
+}
+button:focus {
+    box-shadow:
+            0 0 0 2px var(--black),
+            0 0 0 3px var(--white);
+    border: 1px solid transparent;
+}
+/* #Lists */
+ul, ol {
+    margin: 1em 0;
+}
+/* #Forms */
+form {
+    margin: 0;
+}
+fieldset {
+    margin: 0;
+    padding: .5em 0;
+    border: none;
+}
+input {
+    padding: .8em 1.2em;
+    border: 1px solid var(--black);
+    font-size: var(--paragraph);
+    outline: none;
+}
+input:focus {
+    box-shadow:
+            0 0 0 2px var(--black),
+            0 0 0 3px var(--white);
+    border: 1px solid transparent;
+}
+textarea {
+    padding: .8em 1.2em;
+    font-size: var(--paragraph);
+    font-family: var(--font-main);
+    outline: none;
+}
+textarea:focus {
+    box-shadow:
+            0 0 0 2px var(--black),
+            0 0 0 3px var(--white);
+    border: 1px solid transparent;
+}
+/* #Cursor Pointer */
+button, a {
+    cursor: pointer;
+}
+/* = - = - = - = - = -
+    Global Classes
+- = - = - = - = - = - */
+/* #Flexbox */
+.flexbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flexbox-left {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.flexbox-right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+/* Columns */
+.flexbox-col {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.flexbox-col-left {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.flexbox-col-right {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    align-items: flex-end;
+}
+/* #Fonts */
+.bebas {
+    font-family: var(--font-bebas);
+}
+/* = - = - = -
+    Classes
+- = - = - = - */
+.sect {
+    margin: 2.5em 0;
+}
+/* #Selection */
+::selection {
+    color: var(--white);
+    background: var(--primary);
+}
+/* #Scrollbar */
+::-webkit-scrollbar-track {
+    background-color: var(--background);
+}
+::-webkit-scrollbar {
+    width: 8px;
+    background-color: var(--background);
+}
+::-webkit-scrollbar-thumb {
+    background-color: var(--primary);
+}
+/* = - = - = - = - =
+    @media rules
+- = - = - = - = - = */
