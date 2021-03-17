@@ -101,3 +101,35 @@
 .colors-block-secondary {
     background-color: var(--black);
 }
+/* @media rules */
+@media only screen and (max-width: 1660px) {
+
+}
+@media only screen and (max-width: 1456px) {
+    .colors-block-wrapper {
+        width: 70%;
+    }
+}
+@media only screen and (max-width: 1220px) {
+
+}
+@media only screen and (max-width: 1024px) {
+    .colors-block-wrapper {
+        width: 80%;
+    }
+}
+@media only screen and (max-width: 756px) {
+    .colors-grid {
+        grid-template-columns: 1fr;
+        grid-gap: 2em;
+    }
+    .colors-block-wrapper {
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 576px) {
+
+}
+@media only screen and (max-width: 496px) {
+
+}
