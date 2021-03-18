@@ -29,8 +29,24 @@
     <?php require "structure/head/stylesheets.php" ?>
 </head>
 <body>
-<div id="container" style="height: 100vh;">
-    <canvas id="myCanvas"></canvas>
-</div>
+<main id="shoebox-main">
+    <nav class="sidebar flexbox-col">
+        <div class="navbar-items">
+            <ul class="navbar-items-inner flexbox-col">
+                <li class="navbar-item"><a><i class="uil uil-shopping-cart"></i></a></li>
+                <li class="navbar-item"><a><i class="uil uil-estate"></i></a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="center">
+        <div id="shoebox-wrapper" class="flexbox-col">
+            <div class="title-wrapper flexbox-col">
+                <h1 class="bebas">SNEAKER</h1>
+                <h3>UNDERTITTEL FOR PRODUKT</h3>
+            </div>
+            <canvas id="shoebox"></canvas>
+        </div>
+    </div>
+</main>
 </body>
 </html>

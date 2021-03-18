@@ -1,21 +1,23 @@
 var renderer,
     scene,
     camera,
-    myCanvas = document.getElementById('myCanvas');
+    shoebox = document.getElementById('shoebox');
 
 //RENDERER
 renderer = new THREE.WebGLRenderer({
-    canvas: myCanvas,
-    antialias: true
+    canvas: shoebox,
+    antialias: true,
+    alpha: true
 });
-renderer.setClearColor(0xffffff);
+
+renderer.setClearColor(0x000000, .35);
 renderer.setPixelRatio(window.devicePixelRatio);
 
-container = document.getElementById('container');
+container = document.getElementById('shoebox-wrapper');
 renderer.setSize(container.offsetWidth, container.offsetHeight);
 
 //CAMERA
-camera = new THREE.PerspectiveCamera(35, window.innerWidth / window.innerHeight, 0.1, 1000 );
+camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000 );
 
 //SCENE
 scene = new THREE.Scene();
@@ -57,6 +59,7 @@ function render() {
     if (mesh) {
 
         mesh.rotation.y += 0.01;
+        mesh.rotation.x += 0.005;
 
         //animation mesh
         // mesh.morphTargetInfluences[ 0 ] = Math.sin(delta) * 20.0;

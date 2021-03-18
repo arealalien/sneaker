@@ -12,6 +12,7 @@
     --black: #000000;
     --white: #ffffff;
     /* Colors */
+    --gray: #b8b8b8;
     /* Sizes */
     --heading-large: 5.6rem;
     --heading-medium: 3.6rem;
@@ -179,6 +180,49 @@ button, a {
 - = - = - = - */
 .sect {
     margin: 2.5em 0;
+}
+#shoebox-main {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto 1fr;
+}
+/* Navbar */
+.sidebar {
+    height: 100%;
+}
+.navbar-items-inner {
+    padding: 0;
+    list-style-type: none;
+}
+.navbar-item a {
+    padding: 1em;
+    color: var(--gray);
+    font-size: var(--heading-small);
+}
+/* Shoebox */
+.center {
+    width: 100%;
+}
+#shoebox-wrapper {
+    width: 100%;
+    height: 90vh;
+    position: relative;
+    background-image: url("../images/design/header.jpg");
+    background-position: center center;
+    background-size: cover;
+    overflow: hidden;
+}
+.title-wrapper {
+    top: 2em;
+    position: absolute;
+    color: var(--white);
+    z-index: 10;
+}
+.title-wrapper h1 {
+    letter-spacing: .075em;
+}
+.title-wrapper h3 {
+    font-weight: 200;
 }
 /* #Selection */
 ::selection {
