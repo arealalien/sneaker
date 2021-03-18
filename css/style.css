@@ -1,9 +1,5 @@
 /* Link fonts */
 @font-face {
-    font-family: "Bebas";
-    src: url(../fonts/bebas/BEBAS.ttf);
-}
-@font-face {
     font-family: "Bebas Regular";
     src: url(../fonts/bebas/BebasNeue-Regular.otf);
 }
@@ -23,8 +19,7 @@
     --paragraph: 1.11rem;
     /* Fonts */
     --font-main: "Poppins";
-    --font-bebas: "Bebas";
-    --font-bebas-regular: "Bebas Regular";
+    --font-bebas: "Bebas Regular";
 }
 * {
     box-sizing: border-box;

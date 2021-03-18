@@ -25,7 +25,7 @@
 <body>
     <header class="design-header flexbox">
         <div class="design-header-title">
-            <h1>Design</h1>
+            <h1 class="bebas">Design</h1>
         </div>
         <div class="design-header-inner flexbox">
             <img src="images/design/header.jpg" alt="">
@@ -35,7 +35,7 @@
         <!-- #Colors -->
         <section id="colors" class="design-section">
             <!-- Line -->
-            <div class="des-sec-line flexbox">
+            <div class="des-sec-line">
                 <p class="bebas">COLORS</p>
                 <div class="des-sec-line-inner"></div>
             </div>
@@ -118,20 +118,29 @@
         <!-- #Typography -->
         <section id="typography" class="design-section">
             <!-- Line -->
-            <div class="des-sec-line flexbox">
+            <div class="des-sec-line">
                 <p class="bebas">TYPOGRAPHY</p>
                 <div class="des-sec-line-inner"></div>
             </div>
             <!-- Typography Gird -->
         </section>
-        <!-- #Elements -->
-        <section id="typography" class="design-section">
+        <!-- #Buttons -->
+        <section id="buttons" class="design-section">
             <!-- Line -->
-            <div class="des-sec-line flexbox">
-                <p class="bebas">ELEMENTS</p>
+            <div class="des-sec-line">
+                <p class="bebas">Buttons</p>
                 <div class="des-sec-line-inner"></div>
             </div>
-            <!-- Elements Gird -->
+            <!-- Buttons Gird -->
+        </section>
+        <!-- #Inputs & Forms -->
+        <section id="typography" class="design-section">
+            <!-- Line -->
+            <div class="des-sec-line">
+                <p class="bebas">INPUTS & FORMS</p>
+                <div class="des-sec-line-inner"></div>
+            </div>
+            <!-- Inputs & Forms Gird -->
         </section>
     </main>
 </body>

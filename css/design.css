@@ -10,6 +10,7 @@
 }
 .design-header-title h1 {
     color: var(--white);
+    font-size: calc(var(--heading-large) + 2rem);
     text-align: center;
     word-break: break-word;
 }
@@ -45,9 +46,13 @@
 }
 .des-sec-line {
     width: 100%;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
 }
 .des-sec-line p {
     padding: 0 1em 0 0;
+    font-size: calc(var(--paragraph) + .5rem);
 }
 .des-sec-line-inner {
     width: 100%;
