@@ -20,10 +20,11 @@
     <script src="javascript/models.js" defer></script>
     <script src="javascript/three.js"></script>
     <script src="javascript/GLTFLoader.js"></script>
-    <!--<script src="javascript/OrbitControls.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/102/three.js"></script>
-    <script src="https://unpkg.com/three@0.126.0/examples/js/loaders/GLTFLoader.js"></script>-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+    <script src="javascript/OrbitControls.js"></script>
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/102/three.js"></script>
+    <script src="https://unpkg.com/three@0.126.0/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three-orbitcontrols@2.110.3/OrbitControls.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>-->
     <!-- =========== -->
     <!-- Stylesheets -->
     <?php require "structure/head/stylesheets.php" ?>

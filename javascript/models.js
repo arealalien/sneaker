@@ -1,6 +1,10 @@
+//import * as THREE from '../node_modules/three'
+//import { OrbitControls } from '../node_modules/three/examples/jsm/controls/OrbitControls.js'
+
 var renderer,
     scene,
     camera,
+    container,
     shoebox = document.getElementById('shoebox');
 
 //RENDERER
@@ -11,13 +15,27 @@ renderer = new THREE.WebGLRenderer({
 });
 
 renderer.setClearColor(0x000000, .35);
-renderer.setPixelRatio(window.devicePixelRatio);
+renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 
 container = document.getElementById('shoebox-wrapper');
 renderer.setSize(container.offsetWidth, container.offsetHeight);
 
+window.addEventListener('resize', () => {
+
+    // Update camera
+    camera.aspect = container.offsetWidth / container.offsetHeight;
+    camera.updateProjectionMatrix();
+
+    // Update renderer
+    renderer.setSize(container.offsetWidth, container.offsetHeight);
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+});
+
 //CAMERA
-camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000 );
+camera = new THREE.PerspectiveCamera(45, container.offsetWidth / container.offsetHeight, 0.1, 1000 );
+camera.position.x = 0;
+camera.position.y = 10;
+camera.position.z = 2;
 
 //SCENE
 scene = new THREE.Scene();
@@ -45,6 +63,11 @@ function handle_load(gltf) {
     mesh.position.z = -100;
 }
 
+//controls = new THREE.OrbitControls(camera, renderer.domElement);
+//controls.enableDamping = true;
+//controls.dampingFactor = 0.25;
+//controls.enableZoom = false;
+//controls.autoRotate = true;
 
 //RENDER LOOP
 render();
