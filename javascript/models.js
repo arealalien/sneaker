@@ -5,6 +5,7 @@ var renderer,
     scene,
     camera,
     container,
+    controls,
     shoebox = document.getElementById('shoebox');
 
 //RENDERER
@@ -34,7 +35,7 @@ window.addEventListener('resize', () => {
 //CAMERA
 camera = new THREE.PerspectiveCamera(45, container.offsetWidth / container.offsetHeight, 0.1, 1000 );
 camera.position.x = 0;
-camera.position.y = 10;
+camera.position.y = -10000;
 camera.position.z = 2;
 
 //SCENE
@@ -61,32 +62,42 @@ function handle_load(gltf) {
     mesh.children[0].material = new THREE.MeshLambertMaterial();
     scene.add( mesh );
     mesh.position.z = -100;
+    
 }
 
-//controls = new THREE.OrbitControls(camera, renderer.domElement);
-//controls.enableDamping = true;
-//controls.dampingFactor = 0.25;
-//controls.enableZoom = false;
-//controls.autoRotate = true;
+// controls
+controls = new THREE.OrbitControls( camera, renderer.domElement );
+
+controls.enableDamping = true;
+controls.dampingFactor = 0.05;
+
+controls.enableZoom = true;
+controls.screenSpacePanning = false;
+
+controls.minDistance = 10;
+controls.maxDistance = 100;
 
 //RENDER LOOP
 render();
 
-var delta = 0;
-var prevTime = Date.now();
+//var delta = 0;
+//var prevTime = Date.now();
 
 function render() {
 
+    /*
     delta += 0.1;
 
     if (mesh) {
 
         mesh.rotation.y += 0.01;
-        mesh.rotation.x += 0.005;
 
         //animation mesh
         // mesh.morphTargetInfluences[ 0 ] = Math.sin(delta) * 20.0;
     }
+    */
+
+    controls.update();
 
     renderer.render(scene, camera);
 
