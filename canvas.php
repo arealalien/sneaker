@@ -32,16 +32,20 @@ else {
     <script src="javascript/models.js" type="module" defer></script>
     <script src="https://threejs.org/build/three.js"></script>
     <script src="javascript/GLTFLoader.js"></script>
-    <script src="https://stemkoski.github.io/Three.js/js/OrbitControls.js"></script>
-    <!--<script src="node_modules/three/build/three.js"></script>
+    <script src="javascript/BetterOrbitControls.js"></script>
+    <!--
+        LOCAL:
+    <script src="node_modules/three/build/three.js"></script>
     <script src="javascript/GLTFLoader.js"></script>
     <script src="node_modules/three/examples/jsm/controls/OrbitControls.js"></script>
     <script src="javascript/three.js"></script>
     <script src="javascript/GLTFLoader.js"></script>
-    <script src="javascript/OrbitControls.js"></script>-->
-    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/102/three.js"></script>
+    <script src="javascript/OrbitControls.js"></script>
+        CDN:
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/102/three.js"></script>
     <script src="https://unpkg.com/three@0.126.0/examples/js/loaders/GLTFLoader.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/three-orbitcontrols@2.110.3/OrbitControls.min.js"></script>
+    <script src="https://stemkoski.github.io/Three.js/js/OrbitControls.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>-->
     <!-- =========== -->
     <!-- Stylesheets -->

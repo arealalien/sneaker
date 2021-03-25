@@ -34,9 +34,9 @@ window.addEventListener('resize', () => {
 
 //CAMERA
 camera = new THREE.PerspectiveCamera(45, container.offsetWidth / container.offsetHeight, 0.1, 1000 );
-camera.position.x = 0;
-camera.position.y = -10000;
-camera.position.z = 2;
+camera.position.x = 50;
+camera.position.y = 100;
+camera.position.z = 200;
 
 //SCENE
 scene = new THREE.Scene();
@@ -47,6 +47,9 @@ scene.add(light);
 
 var light2 = new THREE.PointLight(0xffffff, 0.5);
 scene.add(light2);
+
+var ambient = new THREE.AmbientLight(0x404040, 1.0);
+scene.add(ambient);
 
 var loader = new THREE.GLTFLoader();
 
@@ -61,17 +64,30 @@ function handle_load(gltf) {
     console.log(mesh.children[0]);
     mesh.children[0].material = new THREE.MeshLambertMaterial();
     scene.add( mesh );
-    mesh.position.z = -100;
-    
+    mesh.position.z = 0;
+
 }
 
 // controls
 controls = new THREE.OrbitControls( camera, renderer.domElement );
 
+controls.enablePan = false;
+controls.enableZoom = false;
 controls.enableDamping = true;
-controls.dampingFactor = 0.05;
 
-controls.enableZoom = true;
+controls.minDistance = 0;
+controls.maxDistance = Infinity;
+
+controls.smoothDistance = false;
+controls.smoothMinDistance = 0;
+controls.smoothMaxDistance = Infinity;
+controls.smoothDistanceSpeed = 0.1;
+
+controls.isSmoothPolar = false;
+
+controls.dampingFactor = 0.07;
+controls.rotateSpeed = 0.07;
+
 controls.screenSpacePanning = false;
 
 controls.minDistance = 10;
