@@ -8,22 +8,17 @@ let GLobjectPath = url.split("=")[1];
 
 if (GLobjectPath === "sneaker") {
     GLobject = "models/rtfkt/scene.gltf";
+} else if (GLobjectPath === "90s") {
+    GLobject = "models/90s/scene.gltf";
 } else if (GLobjectPath === "blue") {
     GLobject = "models/blue-jay/scene.gltf";
+} else if (GLobjectPath === "cardboard") {
+    GLobject = "models/cardboard/scene.gltf";
+} else if (GLobjectPath === "tekken") {
+    GLobject = "models/tekken/scene.gltf";
 } else {
     GLobject = "models/rtfkt/scene.gltf";
 }
-
-// Define Object
-/*
-window.addEventListener("load", function() {
-    if (window.location.href.indexOf("sneaker") > -1) {
-        GLobject = "models/rtfkt/scene.gltf";
-    } else if (window.location.href.indexOf("lol") > -1) {
-        GLobject = "models/blue-jay/scene.gltf";
-    }
-});s
- */
 
 var renderer,
     scene,

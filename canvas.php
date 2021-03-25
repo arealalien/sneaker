@@ -1,13 +1,26 @@
-<?php $product = ""; ?>
+<?php
+    $product = "";
+    $imgLink = "";
+?>
 <?php
 if (strpos($_SERVER['REQUEST_URI'], "&product=sneaker")!==false) {
     $product = "SNEAKER";
-}
-else if (strpos($_SERVER['REQUEST_URI'], "&product=blue")!==false) {
+    $imgLink = "images/sneakers/sneaker-1-bc.jpg";
+} else if (strpos($_SERVER['REQUEST_URI'], "&product=90s")!==false) {
+    $product = "90s";
+    $imgLink = "images/sneakers/sneaker-2-bc.jpg";
+} else if (strpos($_SERVER['REQUEST_URI'], "&product=blue")!==false) {
     $product = "Blue";
-}
-else {
+    $imgLink = "images/sneakers/sneaker-3-bc.jpg";
+} else if (strpos($_SERVER['REQUEST_URI'], "&product=cardboard")!==false) {
+    $product = "Cardboard";
+    $imgLink = "images/sneakers/sneaker-4-bc.jpg";
+} else if (strpos($_SERVER['REQUEST_URI'], "&product=tekken")!==false) {
+    $product = "Tekken";
+    $imgLink = "images/sneakers/sneaker-5-bc.jpg";
+} else {
     $product = "Default";
+    $imgLink = "images/sneakers/sneaker-1-bc.jpg";
 }
 ?>
 <!DOCTYPE html>
@@ -90,7 +103,7 @@ else {
                 <h3>UNDERTITTEL FOR PRODUKT</h3>
             </div>
             <canvas id="shoebox"></canvas>
-            <img class="shoebox-image" src="images/design/header.jpg" alt="shoe-background">
+            <img class="shoebox-image" src="<?php print $imgLink ?>" alt="shoe-background">
         </div>
         <div class="shoebox-info flexbox-col-left">
             <h1 class="bebas"><?php echo $product ?></h1>

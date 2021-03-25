@@ -29,26 +29,26 @@ sneakers = [
         productName: "Blue",
         sneakerImage: "images/" + imageLocation + "/sneaker-2.png",
         sneakerBackground: "images/" + imageLocation + "/sneaker-2-bc.jpg",
+        link: rootURL + "90s",
+    },
+    {
+        productName: "Blue",
+        sneakerImage: "images/" + imageLocation + "/sneaker-3.png",
+        sneakerBackground: "images/" + imageLocation + "/sneaker-3-bc.jpg",
         link: rootURL + "blue",
     },
     {
         productName: "Sneaker",
-        sneakerImage: "images/" + imageLocation + "/sneaker-1.png",
-        sneakerBackground: "images/" + imageLocation + "/sneaker-1-bc.jpg",
-        link: rootURL + "sneaker",
+        sneakerImage: "images/" + imageLocation + "/sneaker-4.png",
+        sneakerBackground: "images/" + imageLocation + "/sneaker-4-bc.jpg",
+        link: rootURL + "cardboard",
     },
     {
         productName: "Sneaker",
-        sneakerImage: "images/" + imageLocation + "/sneaker-1.png",
+        sneakerImage: "images/" + imageLocation + "/sneaker-5.png",
         sneakerBackground: "images/" + imageLocation + "/sneaker-1-bc.jpg",
-        link: rootURL + "sneaker",
-    },
-    {
-        productName: "Sneaker",
-        sneakerImage: "images/" + imageLocation + "/sneaker-1.png",
-        sneakerBackground: "images/" + imageLocation + "/sneaker-1-bc.jpg",
-        link: rootURL + "sneaker",
-    },
+        link: rootURL + "tekken",
+    }
 ]
 
 
@@ -94,7 +94,7 @@ let elementHover = document.querySelectorAll(".sneaker-grid-box");
 // Hover functions
 elementHover.forEach(function (item) {
     item.addEventListener("mouseenter", function () {
-        item.querySelector(".sneaker").style.transform = "rotate(-35deg) scale(1.65, 1.65)";
+        item.querySelector(".sneaker").style.transform = "rotate(-40deg) scale(1.65, 1.65)";
         item.querySelector(".sneaker-inner").style.minWidth = "100%";
         item.querySelector(".sneaker-inner").style.minHeight = "100%";
         item.querySelector(".sneaker-inner").style.maxHeight = "110%";
