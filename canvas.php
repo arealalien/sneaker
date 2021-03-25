@@ -3,11 +3,11 @@
 if (strpos($_SERVER['REQUEST_URI'], "&product=sneaker")!==false) {
     $product = "SNEAKER";
 }
-else if (strpos($_SERVER['REQUEST_URI'], "&product=arealalien")!==false) {
-    $product = "ArealAlien";
+else if (strpos($_SERVER['REQUEST_URI'], "&product=blue")!==false) {
+    $product = "Blue";
 }
 else {
-    $product = "lol";
+    $product = "Default";
 }
 ?>
 <!DOCTYPE html>
