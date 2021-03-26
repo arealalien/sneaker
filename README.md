@@ -22,4 +22,18 @@ Plugins used:
 <br/>
 
 ### How to use:
-Add necessary items to array
+Add necessary items to array, and elements will be created in the grid.
+
+Like so:
+
+```javascript
+sneakers = [
+    [...]
+    {
+        productName: "Name",
+        sneakerImage: "images/" + imageLocation + "/fileName.png",
+        sneakerBackground: "images/" + imageLocation + "/fileName.jpg",
+        link: rootURL + "name",
+    }
+]
+```
