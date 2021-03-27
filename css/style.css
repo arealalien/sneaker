@@ -24,6 +24,7 @@
 }
 * {
     box-sizing: border-box;
+    user-select: none;
 }
 html, body {
     margin: 0;
@@ -32,6 +33,9 @@ html, body {
     background-color: var(--background);
     -webkit-font-smoothing: antialiased;
     scroll-behavior: smooth;
+}
+img {
+    pointer-events: none;
 }
 /* #Text */
 /* Headings */

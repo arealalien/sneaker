@@ -46,7 +46,7 @@ sneakers = [
     {
         productName: "Sneaker",
         sneakerImage: "images/" + imageLocation + "/sneaker-5.png",
-        sneakerBackground: "images/" + imageLocation + "/sneaker-1-bc.jpg",
+        sneakerBackground: "images/" + imageLocation + "/sneaker-5-bc.jpg",
         link: rootURL + "tekken",
     }
 ]
@@ -64,7 +64,7 @@ function createElements(item, index) {
     elementImageBlur = document.createElement('img');
     // Set Classes On Created Elements
     // = - = - = - = - = - = - = - = -
-    sneakerLink.className = 'sneaker-grid-box-link';
+    sneakerLink.className = 'sneaker-grid-box-link link';
     sneakerGridBox.className = 'sneaker-grid-box flexbox-col';
     sneaker.className = 'sneaker';
     sneakerBackgroundWrapper.className = 'sneaker-grid-box-background flexbox';
