@@ -1,5 +1,8 @@
-<link rel="icon" href="<?php print $rootPath?>images/favicon/favicon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="<?php print $rootPath?>images/favicon/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="<?php print $rootPath?>images/favicon/favicon-16x16.png">
-<link rel="apple-touch-icon" sizes="180x180" href="<?php print $rootPath?>images/favicon/apple-touch-icon.png">
-<link rel="shortcut icon" href="<?php print $rootPath?>images/favicon/favicon.ico" type="image/x-icon">
+<!-- #Unicons -->
+<link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.3/css/line.css">
+<!-- #Google Material Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Icons+Round" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Icons+Sharp" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Icons+Two+Tone" rel="stylesheet">

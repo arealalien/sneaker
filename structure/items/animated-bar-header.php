@@ -1,0 +1,15 @@
+Summer Sale! &nbsp&nbsp
+Summer Sale! &nbsp&nbsp
+Summer Sale! &nbsp&nbsp
+Summer Sale! &nbsp&nbsp
+Summer Sale! &nbsp&nbsp
+Summer Sale! &nbsp&nbsp
+Summer Sale! &nbsp&nbsp
+Summer Sale! &nbsp&nbsp
+Summer Sale! &nbsp&nbsp
+Summer Sale! &nbsp&nbsp
+Summer Sale! &nbsp&nbsp
+Summer Sale! &nbsp&nbsp
+Summer Sale! &nbsp&nbsp
+Summer Sale! &nbsp&nbsp
+Summer Sale! &nbsp&nbsp
