@@ -15,13 +15,9 @@
 -*-~*~-*-*-~*~-*-*-~*~*-*-~*~-*-*-~*~-*-*-~*~*-*-~*~-* |
 - */
 
-
-
-
-
 /* Table of contents
 
-    1. Declaring variables
+    1. Imports
     2. Global styles
         2.1 Typography
         2.2 Buttons
@@ -49,42 +45,15 @@
 
 */
 
-/* ========================
-    1. Declaring Variables
-   ======================== */
+/* ============
+    1. Imports
+   ============ */
+
+@import "variables.css";
 
 @font-face {
     font-family: "Bebas Regular";
     src: url(../fonts/bebas/BebasNeue-Regular.otf);
-}
-
-:root {
-    --primary: 255, 217, 0;
-    --secondary: 255, 187, 0;
-    /*
-    OLD COLORS
-    --primary: 247, 57, 98;
-    --secondary: 202, 213, 255;
-    */
-    --background: 7, 7, 8;
-    --background-secondary: 5, 5, 5;
-    --text-primary: 0, 0, 0;
-    /* Colors */
-    --black: 0, 0, 0;
-    --white: 255, 255, 255;
-    --gray: 117, 117, 117;
-    /* Gradients */
-    --pace: linear-gradient(90deg, rgba(var(--primary), 1) 0%, rgba(var(--secondary),1) 100%);
-    /* Sizes */
-    --heading-large: 5.6rem;
-    --heading-medium: 3.6rem;
-    --heading-small: 2.4rem;
-    --paragraph: 1.11rem;
-    /* misc */
-    --transition-main: .175, .685, .32;
-    /* Fonts */
-    --font-main: "Poppins";
-    --font-bebas: "Bebas Regular";
 }
 
 /* ==================
@@ -92,17 +61,18 @@
    ================== */
 
 *, *::before, *::after {
-    box-sizing: border-box;
+    box-sizing: inherit;
     cursor: none;
 }
 html, body {
     margin: 0;
     width: 100%;
-    color: rgb(var(--text-primary));
+    color: hsl(var(--text-primary));
     font-family: var(--font-main);
-    background-color: rgb(var(--background));
+    background-color: hsl(var(--background));
     -webkit-font-smoothing: antialiased;
     scroll-behavior: smooth;
+    box-sizing: border-box;
 }
 
 /* ================
@@ -146,12 +116,12 @@ p {
 }
 /* Links */
 a {
-    color: rgba(var(--primary), 1);
+    color: hsla(var(--primary), 1);
     font-size: var(--paragraph);
     text-decoration: underline;
 }
 a:visited {
-    color: rgba(var(--primary), .5);
+    color: hsla(var(--primary), .5);
 }
 
 /* =============
@@ -160,15 +130,15 @@ a:visited {
 
 button {
     padding: .8em 1.2em;
-    border: 1px solid var(--black);
+    border: 1px solid hsl(var(--black));
     background-color: var(--background);
     font-size: var(--paragraph);
     outline: none;
 }
 button:focus {
     box-shadow:
-            0 0 0 2px var(--black),
-            0 0 0 3px var(--white);
+            0 0 0 2px hsl(var(--black)),
+            0 0 0 3px hsl(var(--white));
     border: 1px solid transparent;
 }
 
@@ -194,14 +164,14 @@ fieldset {
 }
 input {
     padding: .8em 1.2em;
-    border: 1px solid var(--black);
+    border: 1px solid hsl(var(--black));
     font-size: var(--paragraph);
     outline: none;
 }
 input:focus {
     box-shadow:
-            0 0 0 2px var(--black),
-            0 0 0 3px var(--white);
+            0 0 0 2px hsl(var(--black)),
+            0 0 0 3px hsl(var(--white));
     border: 1px solid transparent;
 }
 textarea {
@@ -212,8 +182,8 @@ textarea {
 }
 textarea:focus {
     box-shadow:
-            0 0 0 2px var(--black),
-            0 0 0 3px var(--white);
+            0 0 0 2px hsl(var(--black)),
+            0 0 0 3px hsl(var(--white));
     border: 1px solid transparent;
 }
 /* Cursor none */
@@ -322,8 +292,8 @@ a svg[data-name$="1"] {
     width: 75%;
 }
 [class*="pribc"] *::selection {
-    color: rgb(var(--primary));
-    background: rgba(var(--black), .33);
+    color: hsl(var(--primary));
+    background: hsla(var(--black), .33);
 }
 
 /* ==============
@@ -350,7 +320,7 @@ a svg[data-name$="1"] {
 }
 .navbar-icon-wrapper svg {
     height: 3.5em;
-    fill: rgb(var(--white));
+    fill: hsl(var(--white));
 }
 /* Right */
 .navbar-right {
@@ -372,20 +342,21 @@ a svg[data-name$="1"] {
     height: 100%;
 }
 .navbar-item-inner {
+    width: 100%;
     height: 100%;
-    color: rgb(var(--white));
+    color: hsl(var(--white));
     text-decoration: none;
     font-weight: 300;
     transition: color .15s ease-in-out;
 }
 .navbar-item-inner:hover {
-    color: rgb(var(--primary));
+    color: hsl(var(--primary));
 }
 .navbar-item-inner:visited {
-    color: rgb(var(--white));
+    color: hsl(var(--white));
 }
 .navbar-item-inner:visited:hover {
-    color: rgb(var(--primary));
+    color: hsl(var(--primary));
 }
 .navbar-item-inner span {
     margin: 0 .75em 0 0;
@@ -395,8 +366,8 @@ a svg[data-name$="1"] {
     left: 1.75em;
     padding: .75em 1.25em;
     position: fixed;
-    color: rgb(var(--primary));
-    background-color: rgb(var(--white), .2);
+    color: hsl(var(--primary));
+    background-color: hsla(var(--white), .2);
     backdrop-filter: blur(.6rem);
     border-radius: .2rem;
     pointer-events: none;
@@ -426,11 +397,11 @@ a svg[data-name$="1"] {
     width: 100%;
     height: 100%;
     position: absolute;
-    background: linear-gradient(rgba(var(--black), .4) 0%, rgba(var(--black), .6) 100%);;
+    background: linear-gradient(hsla(var(--black), .4) 0%, hsla(var(--black), .6) 100%);;
     z-index: 3;
 }
 .header-title h1 {
-    color: rgb(var(--white));
+    color: hsl(var(--white));
     text-align: center;
     word-break: break-word;
 }
@@ -447,6 +418,7 @@ a svg[data-name$="1"] {
     min-height: 110%;
     max-height: 125%;
     position: absolute;
+    background-color: hsl(var(--background));
     filter: hue-rotate(-5deg) saturate(1.5);
     object-fit: cover;
 }
@@ -466,7 +438,7 @@ a svg[data-name$="1"] {
 .animated-bar {
     width: 100%;
     height: 5em;
-    background-color: rgb(var(--primary));
+    background-color: hsl(var(--primary));
 }
 .animated-bar-inner {
     width: 100%;
@@ -501,7 +473,7 @@ a svg[data-name$="1"] {
     width: 100%;
     height: 1fr;
     position: relative;
-    background-color: rgb(var(--background-secondary));
+    background-color: hsl(var(--background-secondary));
     overflow: hidden;
 }
 .product-view-item::after {
@@ -516,7 +488,7 @@ a svg[data-name$="1"] {
 }
 .product-item-top {
     width: 100%;
-    color: rgb(var(--white));
+    color: hsl(var(--white));
 }
 .product-item-image {
     height: 30%;
@@ -533,7 +505,7 @@ a svg[data-name$="1"] {
 #footer {
     width: 100%;
     min-height: 10em;
-    background-color: rgb(var(--background-secondary));
+    background-color: hsl(var(--background-secondary));
 }
 .footer-inner {
     padding: 8em 0;
@@ -548,7 +520,7 @@ a svg[data-name$="1"] {
 }
 .footer-icon-wrapper svg {
     width: 5em;
-    fill: rgb(var(--white));
+    fill: hsl(var(--white));
     mix-blend-mode: overlay;
 }
 /* Right */
@@ -566,7 +538,7 @@ a svg[data-name$="1"] {
     width: 100%;
 }
 .footer-section-heading {
-    color: rgb(var(--white));
+    color: hsl(var(--white));
     letter-spacing: .05em;
 }
 .footer-section-items-wrapper {
@@ -588,20 +560,20 @@ a svg[data-name$="1"] {
 .footer-section-item-inner {
     display: inline-block;
     position: relative;
-    color: rgb(var(--gray));
+    color: hsl(var(--gray));
     text-decoration: none;
     font-weight: 300;
     text-overflow: ellipsis;
     transition: color .15s ease-in-out;
 }
 .footer-section-item-inner:hover {
-    color: rgb(var(--primary));
+    color: hsl(var(--primary));
 }
 .footer-section-item-inner:visited {
-    color: rgb(var(--gray));
+    color: hsl(var(--gray));
 }
 .footer-section-item-inner:hover:visited {
-    color: rgb(var(--primary));
+    color: hsl(var(--primary));
 }
 .footer-section-item-inner::after {
     top: 0;
@@ -610,11 +582,11 @@ a svg[data-name$="1"] {
     width: 0;
     display: block;
     position: relative;
-    border-bottom: 1px solid rgb(var(--gray));
+    border-bottom: 1px solid hsl(var(--gray));
     transition: width .15s ease-in-out, color .15s ease-in-out;
 }
 .footer-section-item-inner:hover::after {
-    border-bottom: 1px solid rgb(var(--primary));
+    border-bottom: 1px solid hsl(var(--primary));
 }
 .footer-section-item-inner:hover::after {
     width: 100%;
@@ -626,19 +598,19 @@ a svg[data-name$="1"] {
 
 /* Selection */
 ::selection {
-    color: rgb(var(--white));
-    background: rgba(var(--primary), .33);
+    color: hsl(var(--white));
+    background: hsla(var(--primary), .33);
 }
 /* Scrollbar */
 ::-webkit-scrollbar-track {
-    background-color: rgb(var(--background));
+    background-color: hsl(var(--background));
 }
 ::-webkit-scrollbar {
     width: 8px;
-    background-color: rgb(var(--background));
+    background-color: hsl(var(--background));
 }
 ::-webkit-scrollbar-thumb {
-    background-color: rgb(var(--primary));
+    background-color: hsl(var(--primary));
 }
 
 /* ===============

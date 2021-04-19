@@ -2,7 +2,7 @@
     <div class="navbar-inner view-width">
         <!-- Left -->
         <div class="navbar-left">
-            <a cursor-class="pointer" class="navbar-icon-wrapper flexbox">
+            <a cursor-class="pointer" class="navbar-icon-wrapper flexbox" href="<?php echo $rootPath ?>index.php">
                 <?php require "{$rootPath}structure/logo.php" ?>
             </a>
         </div>

@@ -1,0 +1,28 @@
+:root {
+    --primary: 51, 100%, 50%;
+    --secondary: 44, 100%, 50%;
+    /*
+    OLD COLORS
+    --primary: 247, 57, 98;
+    --secondary: 202, 213, 255;
+    */
+    --background: 240, 7%, 3%;
+    --background-secondary: 0, 0%, 2%;
+    --text-primary: 0, 0%, 0%;
+    /* Colors */
+    --black: 0, 0%, 0%;
+    --white: 0, 0%, 100%;
+    --gray: 0, 0%, 46%;
+    /* Gradients */
+    --pace: linear-gradient(90deg, hsla(var(--primary), 1) 0%, hsla(var(--secondary),1) 100%);
+    /* Sizes */
+    --heading-large: 5.6rem;
+    --heading-medium: 3.6rem;
+    --heading-small: 2.4rem;
+    --paragraph: 1.11rem;
+    /* misc */
+    --transition-main: .175, .685, .32;
+    /* Fonts */
+    --font-main: "Poppins";
+    --font-bebas: "Bebas Regular";
+}
