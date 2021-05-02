@@ -34,7 +34,7 @@
                     <div class="shopping-cart-note flexbox">
                         <span class="shopping-cart-note-icon flexbox">
                             <ion-icon name="folder-open-outline"></ion-icon>
-                            Empty
+                            <span id="shop-cart-note">Empty</span>
                         </span>
                     </div>
                 </ul>

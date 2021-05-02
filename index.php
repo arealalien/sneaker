@@ -1,7 +1,12 @@
+<?php
+
+$rootPath = "";
+require "php/misc/config.php";
+
+?>
 <!DOCTYPE html>
 <html lang="no">
 <head>
-    <?php $rootPath = "" ?>
     <!-- Meta Tags -->
     <?php require "structure/head/meta.php" ?>
     <meta name="description" content="">
@@ -46,7 +51,7 @@
     <div class="header-background-wrapper flexbox rellax" data-rellax-speed="-7">
         <!--<img id="header-background" class="header-background" src="images/header-vertical.jpg" alt="">-->
         <video id="header-background" class="header-background" loop autoplay preload="auto">
-            <source src="videos/header-2.m4v" type="video/mp4">
+            <source src="videos/header.m4v" type="video/mp4">
         </video>
     </div>
 </header>
@@ -66,54 +71,69 @@
         </div>
     </div>
 
-    <!-- Product View -->
-    <section class="product-view view-width">
-        <div cursor-class="pointer" class="product-view-item flexbox-col">
-            <div class="product-info">
-                <div class="product-item-top">
-                    <h3>Name</h3>
+    <!-- Featured Row -->
+    <div class="featured-row flexbox-col-right view-width">
+        <p>Discover</p>
+        <h3 class="bebas">Latest Sneakers</h3>
+        <div class="featured-row-inner">
+            <div cursor-class="pointer" class="featured-item flexbox">
+                <div class="featured-item-title feat-top">
+                    <h3>Summer Collection</h3>
                 </div>
-            </div>
-            <img class="product-item-image pitem1" src="images/sneakers/sneaker-1.png" alt="">
-            <img class="product-item-image pitem2" src="images/sneakers/sneaker-1-front.png" alt="">
-        </div>
-        <div cursor-class="pointer" class="product-view-item flexbox-col">
-            <div class="product-info">
-                <div class="product-item-top">
-                    <h3>Name</h3>
+                <div class="featured-item-title feat-bottom">
+                    <h3>Summer Collection</h3>
                 </div>
-            </div>
-            <img class="product-item-image pitem1" src="images/sneakers/sneaker-2.png" alt="">
-            <img class="product-item-image pitem2" src="images/sneakers/sneaker-2-side.png" alt="">
-        </div>
-        <div cursor-class="pointer" class="product-view-item flexbox-col">
-            <div class="product-info">
-                <div class="product-item-top">
-                    <h3>Name</h3>
+                <div class="featured-discover">
+                    <p class="bebas">Discorver</p>
+                    <div class="featured-discover-bar"></div>
                 </div>
+                <div class="featured-overlay"></div>
+                <img class="featured-item-image" src="images/featured-1.jpg" alt="">
             </div>
-            <img class="product-item-image pitem1" src="images/sneakers/sneaker-3.png" alt="">
-            <img class="product-item-image pitem2" src="images/sneakers/sneaker-3-front.png" alt="">
-        </div>
-        <div cursor-class="pointer" class="product-view-item flexbox-col">
-            <div class="product-info">
-                <div class="product-item-top">
-                    <h3>Name</h3>
+            <div cursor-class="pointer" class="featured-item flexbox">
+                <div class="featured-item-title feat-top">
+                    <h3>Product Name</h3>
                 </div>
-            </div>
-            <img class="product-item-image pitem1" src="images/sneakers/sneaker-4.png" alt="">
-            <img class="product-item-image pitem2" src="images/sneakers/sneaker-4-front.png" alt="">
-        </div>
-        <div cursor-class="pointer" class="product-view-item flexbox-col">
-            <div class="product-info">
-                <div class="product-item-top">
-                    <h3>Name</h3>
+                <div class="featured-item-title feat-bottom">
+                    <h3>Product Name</h3>
                 </div>
+                <div class="featured-discover">
+                    <p class="bebas">Discorver</p>
+                    <div class="featured-discover-bar"></div>
+                </div>
+                <div class="featured-overlay"></div>
+                <img class="featured-item-image" src="images/featured-1.jpg" alt="">
             </div>
-            <img class="product-item-image pitem1" src="images/sneakers/sneaker-5.png" alt="">
-            <img class="product-item-image pitem2" src="images/sneakers/sneaker-5-front.png" alt="">
+            <div cursor-class="pointer" class="featured-item flexbox">
+                <div class="featured-item-title feat-top">
+                    <h3>Product Name</h3>
+                </div>
+                <div class="featured-item-title feat-bottom">
+                    <h3>Product Name</h3>
+                </div>
+                <div class="featured-discover">
+                    <p class="bebas">Discorver</p>
+                    <div class="featured-discover-bar"></div>
+                </div>
+                <div class="featured-overlay"></div>
+                <img class="featured-item-image" src="images/featured-1.jpg" alt="">
+            </div>
+            <div cursor-class="pointer" class="featured-item flexbox">
+                <div class="featured-item-title feat-top">
+                    <h3>Product Name</h3>
+                </div>
+                <div class="featured-item-title feat-bottom">
+                    <h3>Product Name</h3>
+                </div>
+                <div class="featured-discover">
+                    <p class="bebas">Discorver</p>
+                    <div class="featured-discover-bar"></div>
+                </div>
+                <div class="featured-overlay"></div>
+                <img class="featured-item-image" src="images/featured-1.jpg" alt="">
+            </div>
         </div>
-    </section>
+    </div>
 
     <!-- Animated Bar -->
     <div class="animated-bar pribc flexbox">

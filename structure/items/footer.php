@@ -16,7 +16,8 @@
                             <li class="footer-section-item flexbox"><a cursor-class="pointer" class="footer-section-item-inner" href="<?php echo "{$rootPath}" ?>index.php">Home</a></li>
                             <li class="footer-section-item flexbox"><a cursor-class="pointer" class="footer-section-item-inner" href="<?php echo "{$rootPath}" ?>products.php">Products</a></li>
                             <li class="footer-section-item flexbox"><a cursor-class="pointer" class="footer-section-item-inner" href="<?php echo "{$rootPath}" ?>purchases.php">Purchases</a></li>
-                            <li class="footer-section-item flexbox"><a cursor-class="pointer" class="footer-section-item-inner">About Us</a></li>
+                            <li class="footer-section-item flexbox"><a cursor-class="pointer" class="footer-section-item-inner" href="<?php echo "{$rootPath}" ?>contact.php">Contact</a></li>
+                            <li class="footer-section-item flexbox"><a cursor-class="pointer" class="footer-section-item-inner" href="<?php echo "{$rootPath}" ?>formats.php">Formats</a></li>
                         </ul>
                         <ul class="footer-section-items">
                             <li class="footer-section-item flexbox"><a cursor-class="pointer" class="footer-section-item-inner">Terms & Conditions</a></li>

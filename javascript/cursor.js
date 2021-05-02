@@ -18,6 +18,18 @@ shoppingCartHover.addEventListener("mouseleave", function(event) {
     shoppingCartNote.style.opacity = "0";
 });
 
+// Hover functions variables
+let cartItemRemove = document.querySelectorAll(".cart-item-remove");
+// Hover functions
+cartItemRemove.forEach(function (item) {
+    item.addEventListener("mouseenter", function () {
+        item.querySelector(".cart-item-remove-note").style.opacity = "1";
+    });
+    item.addEventListener("mouseleave", function () {
+        item.querySelector(".cart-item-remove-note").style.opacity = "0";
+    });
+});
+
 const updateCoordinates = e => {
     mouse.x = e.clientX;
     mouse.y = e.clientY;
@@ -59,6 +71,10 @@ const updateCursor = () => {
     cursorCircle.style.transform = rotate + scale;
 
     shoppingCartNote.style.transform = translate;
+
+    cartItemRemove.forEach(function (item) {
+        item.querySelector(".cart-item-remove-note").style.transform = translate;
+    });
 };
 
 function loop() {

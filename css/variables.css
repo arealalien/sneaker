@@ -8,11 +8,21 @@
     */
     --background: 240, 7%, 3%;
     --background-secondary: 0, 0%, 2%;
+    --background-cart: 240, 7%, 6%;
     --text-primary: 0, 0%, 0%;
     /* Colors */
     --black: 0, 0%, 0%;
     --white: 0, 0%, 100%;
     --gray: 0, 0%, 46%;
+    --quite-gray: 0, 0%, 50%;
+    --grooble: 240, 7%, 12%;
+    --red: 352, 100%, 53%;
+    --orange: 34, 100%, 50%;
+    --yellow: 52, 100%, 50%;
+    --green: 128, 100%, 50%;
+    --teal: 156, 100%, 50%;
+    --blue: 206, 100%, 50%;
+    --purple: 276, 100%, 50%;
     /* Gradients */
     --pace: linear-gradient(90deg, hsla(var(--primary), 1) 0%, hsla(var(--secondary),1) 100%);
     /* Sizes */

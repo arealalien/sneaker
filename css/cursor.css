@@ -28,12 +28,12 @@
 }
 .cursor .cursor-default {
     background-image: url('../images/cursor/cursor.svg');
-    transform: translate(-47%, -40%) scale(1, 1);
+    transform: translate(-38%, -33%) scale(1, 1);
     opacity: 1;
 }
 .cursor .cursor-pointer {
     background-image: url('../images/cursor/cursor-pointer.svg');
-    transform: translate(-47%, -36%) scale(1, 1);
+    transform: translate(-45%, -30%) scale(1, 1);
     opacity: 0;
 }
 .cursor .cursor-grab {
@@ -42,23 +42,23 @@
     opacity: 0;
 }
 .pointer > .cursor-default {
-    transform: translate(-47%, -40%) scale(1.75, 1.75);
+    transform: translate(-38%, -33%) scale(1.5, 1.5);
     opacity: 0;
 }
 .pointer > .cursor-pointer {
-    transform: translate(-47%, -36%) scale(1.75, 1.75);
+    transform: translate(-45%, -30%) scale(1.5, 1.5);
     opacity: 1;
 }
 .pointer > .cursor-grab {
-    transform: translate(-47%, -40%) scale(1.75, 1.75);
+    transform: translate(-47%, -40%) scale(1.5, 1.5);
     opacity: 0;
 }
 .grab > .cursor-default {
-    transform: translate(-47%, -40%) scale(1.75, 1.75);
+    transform: translate(-47%, -40%) scale(1.5, 1.5);
     opacity: 0;
 }
 .grab > .cursor-pointer {
-    transform: translate(-47%, -36%) scale(1.75, 1.75);
+    transform: translate(-47%, -36%) scale(1.5, 1.5);
     opacity: 0;
 }
 .grab > .cursor-grab {

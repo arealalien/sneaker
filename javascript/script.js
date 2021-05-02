@@ -9,6 +9,61 @@
 //　　　　█▄▄█　█░░▀░░┬░░▀░░█　█▄▄█
 //*-~*~-*-*-~*~-*-*-~*~*-*-~*~-*-*-~*~-*
 
+// Click to buy and add to cart
+/*
+$("#buy-button").on("click", function() {
+
+    alert("lol");
+
+    let shoebox = $(".shoebox-info");
+    let product = $("#product-name").html();
+    let quantity = 1;
+    let cartUpdate = {product: product, quantity: quantity}
+
+    $.post('php/cart-update.php', cartUpdate, function(data){
+        console.log(data);
+    });
+});*/
+
+let clicks = 0;
+let sneaktit = " Sneaker";
+
+$("#buy-button").on("click", function() {
+
+    let shoppingCartNote = $("#shop-cart-note");
+
+    clicks++;
+
+    if (clicks > 1) {
+        sneaktit = " Sneakers";
+    }
+
+    shoppingCartNote.html(clicks + sneaktit);
+
+});
+
+
+// Hover functions variables
+let iii = 0;
+let odrPc = document.querySelectorAll(".odr-pc");
+
+// Hover functions
+odrPc.forEach(function (item) {
+
+    iii++;
+
+    let id = item.querySelector(".order-details-item-price").innerHTML;
+    let lastChar = id.substr(id.length - 3);
+
+    let lastCharNum = parseInt(lastChar);
+    let lastCharNumAdd = lastCharNum * iii++;
+
+    let totalPrice = document.getElementById("total-price");
+    totalPrice.innerhtml = lastCharNumAdd;
+
+});
+
+
 class Button {
     constructor(headerImage) {
         this.img = headerImage;

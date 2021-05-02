@@ -14,6 +14,9 @@
     position: relative;
     overflow: hidden;
 }
+#shoebox {
+    filter: saturate(1.2);
+}
 /* Arrows */
 .shoebox-arrows {
     right: 3em;
@@ -31,7 +34,7 @@
 /* Shoebox Info */
 .shoebox-info {
     margin: 5em 0;
-    color: rgb(var(--white));
+    color: hsl(var(--white));
 }
 .shoebox-info h1 {
     font-size: calc(var(--heading-large) + 1rem);

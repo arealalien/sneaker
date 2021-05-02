@@ -1,27 +1,31 @@
 <?php
-    $product = "";
-    $imgLink = "";
-?>
-<?php
+
+require "php/misc/config.php";
+$product = "";
+$productPrice = "";
+
+//if (isset($_SESSION["cart"]))
+
 if (strpos($_SERVER['REQUEST_URI'], "&product=sneaker")!==false) {
     $product = "SNEAKER";
-    $imgLink = "images/sneakers/sneaker-1-bc.jpg";
+    $productPrice = "199";
 } else if (strpos($_SERVER['REQUEST_URI'], "&product=90s")!==false) {
     $product = "90s";
-    $imgLink = "images/sneakers/sneaker-2-bc.jpg";
+    $productPrice = "129";
 } else if (strpos($_SERVER['REQUEST_URI'], "&product=blue")!==false) {
     $product = "Blue";
-    $imgLink = "images/sneakers/sneaker-3-bc.jpg";
+    $productPrice = "219";
 } else if (strpos($_SERVER['REQUEST_URI'], "&product=cardboard")!==false) {
     $product = "Cardboard";
-    $imgLink = "images/sneakers/sneaker-4-bc.jpg";
+    $productPrice = "349";
 } else if (strpos($_SERVER['REQUEST_URI'], "&product=tekken")!==false) {
     $product = "Tekken";
-    $imgLink = "images/sneakers/sneaker-5-bc.jpg";
+    $productPrice = "299";
 } else {
     $product = "Default";
-    $imgLink = "images/sneakers/sneaker-1-bc.jpg";
+    $productPrice = "199";
 }
+
 ?>
 <!DOCTYPE html>
 <html lang="no">
@@ -81,12 +85,34 @@ if (strpos($_SERVER['REQUEST_URI'], "&product=sneaker")!==false) {
             </div>
             <canvas cursor-class="grab" id="shoebox"></canvas>
         </div>
-        <div class="shoebox-info flexbox-col-left">
-            <h1 class="bebas"><?php echo $product ?></h1>
-            <h3>UNDERTITTEL FOR PRODUKT</h3>
+        <div class="shoebox-info view-width flexbox-col-left">
+            <h1 id="product-name"><?php echo $product ?></h1>
+            <p>$<?php print $productPrice ?></p>
+            <div class="button-wrapper">
+                <button id="buy-button" cursor-class="pointer" type="button" class="button btn-primary">Buy and pick up<div class="btn-secondary"></div></button>
+            </div>
         </div>
     </div>
 </main>
+
+<script type="text/javascript">
+    let name = $("#product-name").html();
+    let namedb = {name: name}
+
+    $('#buy-button').click(function(){
+        $.ajax({
+            type: "POST",
+            url: "php/cart-update.php",
+            data: namedb,
+            success: function(msg){
+
+            },
+            error: function(XMLHttpRequest, textStatus, errorThrown) {
+                alert("Some error occured");
+            }
+        });
+    });
+</script>
 
 <!-- Footer -->
 <?php require "structure/items/footer.php" ?>
